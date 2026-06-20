@@ -1,0 +1,9 @@
+{
+  "$comment": "Client config for the Project Bootstrapper MCP server. Use an ABSOLUTE path.",
+  "mcpServers": {
+    "project-bootstrapper": {
+      "command": "node",
+      "args": ["/abs/path/to/project-bootstrapper/mcp-server/src/server.ts"]
+    }
+  }
+}
