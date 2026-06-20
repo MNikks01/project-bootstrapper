@@ -1,0 +1,14 @@
+{
+  "name": "project-bootstrapper-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Project Bootstrapper (#5) engine — turn a spec (template + feature toggles) into a complete, production-ready, AI-agent-ready project (code + CLAUDE.md/AGENTS.md/mcp.json + CI + Docker) as a file map. Node native TypeScript; zero-network.",
+  "bin": { "bootstrap": "src/cli.ts" },
+  "scripts": {
+    "demo": "node scripts/demo.ts",
+    "test": "node scripts/test.ts",
+    "cli": "node src/cli.ts"
+  },
+  "engines": { "node": ">=22.18" }
+}

@@ -1,0 +1,18 @@
+# AI Project Bootstrapper
+
+> Spin up production-grade, AI-agent-ready repositories in minutes — Next.js/NestJS/Postgres+pgvector/Stripe/OTel + CLAUDE.md/AGENTS.md/mcp.json/llms.txt + CI/Docker/guardrails/eval skeleton, optionally AI-customized from a plain-English brief. Project #5; best as a ContextOS (#1) feature, not a standalone company. Spec-first; no code yet.
+
+## Core
+- [README](./README.md), [VISION](./VISION.md), [PROBLEM](./PROBLEM.md), [CUSTOMERS](./CUSTOMERS.md), [FEATURES](./FEATURES.md), [USER_STORIES](./USER_STORIES.md)
+## Engineering
+- [ARCHITECTURE](./ARCHITECTURE.md), [TECH_STACK](./TECH_STACK.md), [DATABASE](./DATABASE.md), [API_DESIGN](./API_DESIGN.md), [AI_ARCHITECTURE](./AI_ARCHITECTURE.md), [RAG](./RAG.md) (minimal), [MCP](./MCP.md), [AGENT_DESIGN](./AGENT_DESIGN.md)
+## Production
+- [SECURITY](./SECURITY.md), [OBSERVABILITY](./OBSERVABILITY.md), [GUARDRAILS](./GUARDRAILS.md), [DEVOPS](./DEVOPS.md)
+## Execution
+- [TASKS](./TASKS.md), [SPRINTS](./SPRINTS.md) (MVP ≈3 wks)
+## Business
+- [PRICING](./PRICING.md), [GTM](./GTM.md), [SALES](./SALES.md), [RISKS](./RISKS.md), [HIRING](./HIRING.md), [OPEN_SOURCE](./OPEN_SOURCE.md), [RESUME_VALUE](./RESUME_VALUE.md)
+## For agents
+- [CLAUDE.md](./CLAUDE.md), [AGENTS.md](./AGENTS.md), [mcp.json](./mcp.json)
+## Honest stance
+Commodity scaffolding → free CLI for funnel/brand; monetize via ContextOS + org templates. Cheapest project; build opportunistically.

@@ -1,0 +1,12 @@
+{
+  "$comment": "Project Bootstrapper MCP config template. 'bootstrapper' optionally exposes scaffolding as an MCP tool so an agent can create projects. Generated repos ship with their OWN mcp.json. Replace ${VARS} from your environment/secret manager — never commit real tokens.",
+  "mcpServers": {
+    "bootstrapper": {
+      "url": "https://api.bootstrap.dev/mcp",
+      "transport": "streamable-http",
+      "headers": { "Authorization": "Bearer ${BOOTSTRAP_API_KEY}" },
+      "description": "Scaffold a production-grade, AI-ready project from a template or a plain-English brief.",
+      "tools": ["list_templates", "scaffold_project", "push_to_github"]
+    }
+  }
+}
