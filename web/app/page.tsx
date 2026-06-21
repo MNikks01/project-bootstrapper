@@ -71,8 +71,8 @@ export default function Home() {
 
       <section className="mt-8 space-y-4">
         <div className="flex flex-wrap gap-3">
-          <input value={name} onChange={(e) => setName(e.target.value)} placeholder="project name" className="rounded-md border border-zinc-300 px-3 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-900" />
-          <select value={template} onChange={(e) => setTemplate(e.target.value)} className="rounded-md border border-zinc-300 px-3 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-900">
+          <input value={name} onChange={(e) => setName(e.target.value)} aria-label="project name" placeholder="project name" className="rounded-md border border-zinc-300 px-3 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-900" />
+          <select value={template} onChange={(e) => setTemplate(e.target.value)} aria-label="Template" className="rounded-md border border-zinc-300 px-3 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-900">
             {TEMPLATES.map((t) => <option key={t}>{t}</option>)}
           </select>
         </div>
@@ -84,12 +84,12 @@ export default function Home() {
             </label>
           ))}
         </div>
-        <button onClick={generate} disabled={busy === "gen"} className="rounded-md bg-black px-4 py-2 text-sm font-medium text-white disabled:opacity-50 dark:bg-white dark:text-black">
+        <button type="button" onClick={generate} disabled={busy === "gen"} aria-busy={busy === "gen"} className="rounded-md bg-black px-4 py-2 text-sm font-medium text-white disabled:opacity-50 dark:bg-white dark:text-black">
           {busy === "gen" ? "Generating…" : "Generate"}
         </button>
       </section>
 
-      {error && <p className="mt-4 rounded-md bg-red-50 px-3 py-2 text-sm text-red-700">{error}</p>}
+      {error && <p role="alert" aria-live="assertive" className="mt-4 rounded-md bg-red-50 px-3 py-2 text-sm text-red-700">{error}</p>}
 
       {result && (
         <section className="mt-8">
@@ -97,7 +97,7 @@ export default function Home() {
             <h2 className="text-lg font-semibold">
               {result.name} · {result.template} · {result.fileCount} files
             </h2>
-            <button onClick={download} disabled={busy === "zip"} className="rounded-md bg-emerald-600 px-4 py-2 text-sm font-medium text-white disabled:opacity-50">
+            <button type="button" onClick={download} disabled={busy === "zip"} aria-busy={busy === "zip"} className="rounded-md bg-emerald-600 px-4 py-2 text-sm font-medium text-white disabled:opacity-50">
               {busy === "zip" ? "Zipping…" : "Download ZIP"}
             </button>
           </div>
@@ -105,7 +105,7 @@ export default function Home() {
           <div className="mt-4 grid gap-4 sm:grid-cols-[220px_1fr]">
             <div className="rounded-md border border-zinc-200 p-2 text-xs dark:border-zinc-800">
               {Object.keys(result.files).map((p) => (
-                <button key={p} onClick={() => setOpenFile(p)} className={`block w-full truncate rounded px-2 py-1 text-left font-mono ${openFile === p ? "bg-zinc-100 dark:bg-zinc-800" : ""}`}>
+                <button type="button" key={p} onClick={() => setOpenFile(p)} className={`block w-full truncate rounded px-2 py-1 text-left font-mono ${openFile === p ? "bg-zinc-100 dark:bg-zinc-800" : ""}`}>
                   {p}
                 </button>
               ))}
