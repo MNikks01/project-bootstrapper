@@ -2,7 +2,7 @@
 
 ## Install & CLI
 
-scaffold a production-ready, AI-agent-ready project. Requires Node ≥23.6 (runs on Node's native TypeScript).
+scaffold a production-ready, AI-agent-ready project. Requires Node ≥18.
 
 ```bash
 npm i -g @mnikks01/bootstrap    # then run `bootstrap …`, or use npx without installing:
