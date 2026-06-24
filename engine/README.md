@@ -2,14 +2,17 @@
 
 ## Install & CLI
 
-scaffold a production-ready, AI-agent-ready project. Requires Node ≥18.
+Scaffold a **complete, runnable** project — the CLI writes the files, runs `git init`, and runs `npm install` for you. Requires Node ≥18.
 
 ```bash
 npm i -g @mnikks01/bootstrap    # then run `bootstrap …`, or use npx without installing:
-npx @mnikks01/bootstrap my-app --template ai-saas --features auth,billing,rag -o ./my-app
-npx @mnikks01/bootstrap my-svc --template node-service --features docker,ci
+npx @mnikks01/bootstrap my-api --template express-api      # then: cd my-api && npm run dev
+npx @mnikks01/bootstrap my-app --template next-app --features auth,docker,ci
+npx @mnikks01/bootstrap my-spa --template react-vite
 npx @mnikks01/bootstrap --help
 ```
+
+**Templates** (each a complete, working codebase): `next-app`, `express-api`, `fastify-api`, `react-vite`, `node-cli`, `mcp-server` (`ai-saas`/`node-service` are aliases). Skip the automatic steps with `--no-install` / `--no-git`. Optional `--features auth,billing,rag,mcp,docker,ci`.
 
 
 The core engine for project #5. Turn a spec (**template + feature toggles**) into a complete,

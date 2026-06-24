@@ -1,7 +1,15 @@
 // Core types for the Project Bootstrapper engine. A ScaffoldSpec (template + features)
 // deterministically produces a complete project as a file map (path -> contents).
 
-export type Template = "ai-saas" | "node-service" | "mcp-server";
+export type Template =
+  | "next-app"
+  | "express-api"
+  | "fastify-api"
+  | "react-vite"
+  | "node-cli"
+  | "mcp-server"
+  | "ai-saas" // alias -> next-app
+  | "node-service"; // alias -> express-api
 
 export interface Features {
   auth?: boolean; // Clerk-style auth scaffold

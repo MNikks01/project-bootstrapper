@@ -8,13 +8,16 @@
 
 **▶ Try it / deploy your own:** [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FMNikks01%2Fproject-bootstrapper&root-directory=web&project-name=project-bootstrapper) · see [DEPLOY.md](./DEPLOY.md) for CLI & self-hosting.
 
-**🖥️ CLI:** scaffold a production-ready, AI-agent-ready project — published on npm (needs Node ≥18):
+**🖥️ CLI:** scaffold a **complete, runnable** project and install it for you — published on npm (needs Node ≥18):
 ```bash
 npm i -g @mnikks01/bootstrap    # installs the `bootstrap` command — or use npx (no install) below
-npx @mnikks01/bootstrap my-app --template ai-saas --features auth,billing,rag -o ./my-app
-npx @mnikks01/bootstrap my-svc --template node-service --features docker,ci
+npx @mnikks01/bootstrap my-api --template express-api          # then: cd my-api && npm run dev
+npx @mnikks01/bootstrap my-app --template next-app --features auth,docker,ci
+npx @mnikks01/bootstrap my-spa --template react-vite
 npx @mnikks01/bootstrap --help
 ```
+Templates (each is a complete, working codebase): **next-app**, **express-api**, **fastify-api**, **react-vite**, **node-cli**, **mcp-server** (`ai-saas`/`node-service` kept as aliases). The CLI writes the files, runs `git init`, and runs `npm install` automatically (use `--no-install` / `--no-git` to skip). Optional `--features auth,billing,rag,mcp,docker,ci` add coherent extras.
+
 From a clone instead: `node engine/src/cli.ts <args>`.
 
 
