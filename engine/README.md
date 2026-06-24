@@ -1,5 +1,17 @@
 # Project Bootstrapper — engine + CLI ✅
 
+## Install & CLI
+
+scaffold a production-ready, AI-agent-ready project. Requires Node ≥23.6 (runs on Node's native TypeScript).
+
+```bash
+npm i -g @mnikks01/bootstrap    # then run `bootstrap …`, or use npx without installing:
+npx @mnikks01/bootstrap my-app --template ai-saas --features auth,billing,rag -o ./my-app
+npx @mnikks01/bootstrap my-svc --template node-service --features docker,ci
+npx @mnikks01/bootstrap --help
+```
+
+
 The core engine for project #5. Turn a spec (**template + feature toggles**) into a complete,
 production-ready, **AI-agent-ready** project — code + `CLAUDE.md` / `AGENTS.md` / `mcp.json` +
 CI + Docker — as a deterministic file map. Pure TypeScript, **Node 24 native TS, zero-network**.
