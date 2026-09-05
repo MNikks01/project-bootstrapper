@@ -6,6 +6,6 @@
   "description": "MCP server exposing Project Bootstrapper — list_templates, scaffold_project, preview_file — so any MCP host/agent can generate production-ready, AI-agent-ready project scaffolds.",
   "bin": { "project-bootstrapper-mcp": "src/server.ts" },
   "scripts": { "start": "node src/server.ts", "smoke": "node scripts/smoke.ts" },
-  "dependencies": { "@modelcontextprotocol/sdk": "^1.0.0", "zod": "^3.23.0" },
+  "dependencies": { "@modelcontextprotocol/sdk": "^1.0.0", "zod": "^4.5.4" },
   "engines": { "node": ">=22.18" }
 }
